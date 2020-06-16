@@ -1,6 +1,8 @@
 import React, { useState, Component } from "react";
 import toDoForm from "./components/toDoForma";
+import toDoList from './components/toDoList';
 
+ 
 function App2() {
   const [ToDos, setTodos] = useState([]);
   function addToDo(toDo) {
@@ -72,7 +74,7 @@ class App extends Component {
             value={this.state.newItem}
             onChange={(e) => this.updateInput("newItem", e.target.value)}
           />
-          <button onSubmit={() => this.addItem()}>Add</button>
+          <button onClick={() => this.addItem()}>Add</button>
           <br />
           <ul>
             {this.state.list.map((item) => {

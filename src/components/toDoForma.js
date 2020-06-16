@@ -2,21 +2,21 @@ import React, { useState } from "react";
 import * as uuid from "uuid";
 
 function ToDoForm(addTodo) {
-  const [toDo, setToDo] = useState({
+  const [todo, setToDo] = useState({
     id: "",
     task: "",
     completed: false,
   });
 
   function handleTaskInputChange(e) {
-    setToDo({ ...toDo, task: e.target.value });
+    setToDo({ ...todo, task: e.target.value });
   }
 
   function handleSubmit(e) {
     e.preventDefault();
-    if (toDo.task.trim()) {
-      addTodo({ ...toDo, id: uuid.v4() });
-      setToDo({ ...toDo, task: "" });
+    if (todo.task.trim()) {
+      addTodo({ ...todo, id: uuid.v4() });
+      setToDo({ ...todo, task: "" });
     }
   }
 
@@ -25,7 +25,7 @@ function ToDoForm(addTodo) {
       <input
         name="task"
         type="text"
-        value={toDo.task}
+        value={todo.task}
         onChange={handleTaskInputChange}
       />
 
