@@ -5,11 +5,15 @@ import "./App.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import ToDoForm from "./components/toDoForma";
+import App2 from './App';
+import App3 from './App';
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
     <ToDoForm />
+    <App2 />
+    <App3 />
   </React.StrictMode>,
   document.getElementById("root")
 );
